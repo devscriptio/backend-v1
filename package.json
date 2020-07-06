@@ -22,6 +22,8 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "debug": "^4.1.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "winston": "^3.3.3"
   }
 }
