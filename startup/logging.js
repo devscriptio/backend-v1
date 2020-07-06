@@ -1,8 +1,8 @@
 const winston = require("winston");
 const { createLogger, format, transports } = require("winston");
 const { combine, timestamp, label, prettyPrint, colorize } = format;
-require("winston-mongodb");
-require("express-async-errors");
+//require("winston-mongodb");
+//require("express-async-errors");
 
 module.exports = function () {
   winston.exceptions.handle(

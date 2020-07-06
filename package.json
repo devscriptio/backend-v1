@@ -23,7 +23,10 @@
     "@hapi/joi": "^17.1.1",
     "debug": "^4.1.1",
     "express": "^4.17.1",
+    "helmet": "^3.23.3",
     "mongoose": "^5.9.21",
-    "winston": "^3.3.3"
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.1"
   }
 }
