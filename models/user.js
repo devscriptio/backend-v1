@@ -1,16 +1,18 @@
 const mongoose = require("mongoose");
 const joi = require("@hapi/joi");
 
-const model = new mongoose.Schema({
+const userModel = new mongoose.Schema({
   userName: {
     type: String,
     minlength: 3,
     maxlength: 200,
+    unique: true,
   },
   email: {
     type: String,
     minlength: 5,
     maxlength: 200,
+    unique: true,
   },
   password: {
     type: String,
@@ -27,3 +29,7 @@ function validateUser(_user) {
   });
   return schema.validate(_user);
 }
+module.exports = {
+  userModel,
+  validateUser,
+};
