@@ -1,34 +1,34 @@
 {
-	"name": "webscript",
-	"version": "1.0.0",
-	"description": "This project for a web community",
-	"main": "index.js",
-	"scripts": {
-		"startapp": "node index.js",
-		"devstart": "nodemon index.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/webtok/backend-v1.git"
-	},
-	"keywords": [
-		"dev-com"
-	],
-	"author": "divay and vaibhav",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/webtok/backend-v1/issues"
-	},
-	"homepage": "https://github.com/webtok/backend-v1#readme",
-	"dependencies": {
-		"@hapi/joi": "^17.1.1",
-		"debug": "^4.1.1",
-		"express": "^4.17.1",
-		"helmet": "^3.23.3",
-		"mongoose": "^5.9.21",
-		"morgan": "^1.10.0",
-		"winston": "^3.3.3",
-		"winston-mongodb": "^5.0.1",
-		"nodemon": "^2.0.4"
-	}
+  "name": "webscript",
+  "version": "1.0.0",
+  "description": "This project for a web community",
+  "main": "index.js",
+  "scripts": {
+    "startapp": "node index.js",
+    "devstart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webtok/backend-v1.git"
+  },
+  "keywords": [
+    "dev-com"
+  ],
+  "author": "divay and vaibhav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webtok/backend-v1/issues"
+  },
+  "homepage": "https://github.com/webtok/backend-v1#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "mongoose": "^5.9.21",
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.1",
+    "nodemon": "^2.0.4"
+  }
 }
