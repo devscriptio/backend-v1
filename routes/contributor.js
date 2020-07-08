@@ -13,7 +13,7 @@ Router.get("/", async (req, res) => {
     const _contributors = await getContributors();
     if (_contributors.length == 0)
       return res.send([`No Item Found In the DataBase`]);
-    return _contributors;
+    return res.send(_contributors);
   } catch (error) {
     return res.status(200).send(error.message);
   }
