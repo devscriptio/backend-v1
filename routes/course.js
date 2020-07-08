@@ -18,7 +18,7 @@ Router.get("/:id", async (req, res) => {
   try {
     const result = await getCourse(req.params.id);
     if (!result) return res.status(401).send(`No item Found`);
-    return result;
+    return res.send(result);
   } catch (error) {
     return res.status(200).send(error.message);
   }
