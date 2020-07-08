@@ -15,7 +15,7 @@ Router.get("/", async (req, res) => {
       return res.send([`No Item Found In the DataBase`]);
     return res.send(_contributors);
   } catch (error) {
-    return res.status(200).send(error.message);
+    return res.status(401).send(error.message);
   }
 });
 //get one contributor by its id
@@ -24,23 +24,23 @@ Router.get("/:id", async (req, res) => {
     const _contributor = await getContributor(req.params.id);
     if (!_contributor)
       return res
-        .status(401)
+        .status(404)
         .send(`No Contributor Found In DataBase With id ${req.params.id}`);
     return res.send(_contributor);
   } catch (error) {
-    return res.status(200).send(error.message);
+    return res.status(401).send(error.message);
   }
 });
 //add one contributor
 Router.post("/", async (req, res) => {
   const { error } = validateContibutor(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
+  if (error) return res.status(401).send(error.details[0].message);
   try {
     const _contributor = await addContributor(req.body);
-    if (!_contributor) return res.status(200).send("Server Error..!!");
+    if (!_contributor) return res.status(400).send("Server Error..!!");
     return res.send(_contributor);
   } catch (error) {
-    return res.status(200).send(error.message);
+    return res.status(400).send(error.message);
   }
 });
 
