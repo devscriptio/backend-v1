@@ -19,7 +19,7 @@ const videoSchema = new mongoose.Schema({
   explaination: {
     type: String,
   },
-  TopicsCovered: [],
+  topicsCovered: [],
 });
 
 function validateVideo(_video) {
@@ -28,7 +28,7 @@ function validateVideo(_video) {
     title: joi.string().required(),
     videoLink: joi.string().required(),
     explaination: joi.string(),
-    TopicsCovered: joi.array(),
+    topicsCovered: joi.array(),
   });
   return _schema.validate(_video);
 }
