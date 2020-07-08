@@ -1,6 +1,6 @@
 const express = require("express");
 const { validateCourse } = require("../models/course");
-const { getCourses, getCourse } = require("../database/course");
+const { getCourses, getCourse, addCourse } = require("../database/course");
 const Router = express.Router();
 
 //handling get request
@@ -27,7 +27,13 @@ Router.get("/:id", async (req, res) => {
 Router.post("/", async (req, res) => {
   const { error } = validateCourse(req.body);
   if (error) return res.status(400).send(error.details[0].message);
+  try {
+    const result = await addCourse(req.body);
+    if (!result) return res.status(200).send(`Server Error..!!`);
+    return res.send(result);
+  } catch (error) {
+    return res.status(400).send(err.message);
+  }
 });
-
 
 module.exports = Router;
