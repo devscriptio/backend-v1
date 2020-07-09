@@ -5,7 +5,10 @@ const topicSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  publishDate: Date.now(),
+  publishDate: {
+    type: Date,
+    default: Date.now,
+  },
   externalLinks: [],
   likes: {
     type: Number,
