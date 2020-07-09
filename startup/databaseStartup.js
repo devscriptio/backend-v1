@@ -11,7 +11,7 @@ function connectDataBase() {
     })
     .then(() => {
       debug(`Database Connected..!!`);
-      winston.info(`Database is Connected..!!`);
+      // winston.info(`Database is Connected..!!`);
     });
 }
 module.exports = connectDataBase;

@@ -12,5 +12,5 @@ require("./startup/databaseStartup")();
 const PORT = 3001;
 app.listen(PORT, () => {
   connectDebug(`listening at port ${PORT}`);
-  winston.info(`listening at port ${PORT}`);
+  // winston.info(`listening at port ${PORT}`);
 });
