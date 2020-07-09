@@ -20,7 +20,7 @@ const subjectSchema = new mongoose.Schema({
 function validateSubject(_subject) {
   const _schema = joi.object({
     name: joi.string().required(),
-    courseId: joi.string().max(24).min(24),
+    courseId: joi.string().max(24).min(24).required(),
     topics: joi.array(),
     subjectTags: joi.array(),
     subjectKeywords: joi.array(),
